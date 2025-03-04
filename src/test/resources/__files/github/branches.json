@@ -1,0 +1,14 @@
+[
+  {
+    "name": "main",
+    "commit": {
+      "sha": "abc123"
+    }
+  },
+  {
+    "name": "develop",
+    "commit": {
+      "sha": "def456"
+    }
+  }
+] 
