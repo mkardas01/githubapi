@@ -1,5 +1,5 @@
 ## Opis
-Aplikacja Spring Boot do przeglądania repozytoriów GitHub użytkownika. Pobiera listę repozytoriów (z wyłączeniem forków) wraz z ich gałęziami.
+Aplikacja Quarkus do przeglądania repozytoriów GitHub użytkownika. Pobiera listę repozytoriów (z wyłączeniem forków) wraz z ich gałęziami.
 
 ## Wymagania
 
@@ -25,7 +25,7 @@ Aplikacja Spring Boot do przeglądania repozytoriów GitHub użytkownika. Pobier
 
 ## Uruchomienie
 ```bash
-mvn spring-boot:run
+mvn quarkus:dev
 ```
 
 ## API
@@ -87,35 +87,6 @@ GET http://localhost:8080/api/users/octocat/repositories
     "status": 403,
     "message": "API rate limit exceeded..."
 }
-```
-
-
-## Struktura projektu
-
-```
-src/
-├── main/
-│   ├── java/
-│   │   └── com/example/githubapi/
-│   │       ├── config/
-│   │       │   └── WebClientConfig.java
-│   │       ├── controller/
-│   │       │   └── GithubController.java
-│   │       ├── exception/
-│   │       │   └── GlobalExceptionHandler.java
-│   │       ├── model/
-│   │       │   ├── Branch.java
-│   │       │   ├── Repository.java
-│   │       │   └── ErrorResponse.java
-│   │       ├── service/
-│   │       │   └── GithubService.java
-│   │       └── GithubapiApplication.java
-│   └── resources/
-│       └── application.properties
-└── test/
-    └── java/
-        └── com/example/githubapi/
-            └── GithubapiApplicationTests.java
 ```
 
 ## Testy
