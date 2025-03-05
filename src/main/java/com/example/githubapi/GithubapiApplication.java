@@ -1,15 +1,11 @@
 package com.example.githubapi;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableAsync;
+import io.quarkus.runtime.Quarkus;
+import io.quarkus.runtime.annotations.QuarkusMain;
 
-@SpringBootApplication
-@EnableAsync
+@QuarkusMain
 public class GithubapiApplication {
-
 	public static void main(String[] args) {
-		SpringApplication.run(GithubapiApplication.class, args);
+		Quarkus.run(args);
 	}
-
 }
